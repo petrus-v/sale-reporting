@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<odoo>
+
+    <template
+        id="report_saleorder_document_header_page"
+        inherit_id="sale.report_saleorder_document"
+    >
+      <xpath expr="//div[@id='informations']" position="after">
+        <div class="page" t-if="doc.header_page" style="page-break-after: always;">
+          <span t-field="doc.header_page" />
+        </div>
+      </xpath>
+
+    </template>
+
+</odoo>

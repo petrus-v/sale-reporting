@@ -1,0 +1,21 @@
+<odoo>
+    <record model="ir.ui.view" id="view_order_form_terms_template">
+        <field name="name">sale_report_header_page.sale.order.form</field>
+        <field name="model">sale.order</field>
+        <field name="inherit_id" ref="sale.view_order_form" />
+        <field name="arch" type="xml">
+            <xpath expr="//form/sheet/notebook" position="inside">
+                <page string="Header report page">
+                    <group>
+                        <field name="header_page_id" />
+                        <field
+                            name="header_page"
+                            placeholder="Header page report"
+                            nolabel="1"
+                        />
+                    </group>
+                </page>
+            </xpath>
+        </field>
+    </record>
+</odoo>
