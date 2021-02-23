@@ -6,8 +6,12 @@
         inherit_id="sale.report_saleorder_document"
     >
       <xpath expr="//div[@id='informations']" position="after">
-        <div class="page" t-if="doc.header_page" style="page-break-after: always;">
-          <span t-field="doc.header_page" />
+        <div
+                class="page"
+                t-if="doc.header_page and doc.header_page != '&lt;p&gt;&lt;br&gt;&lt;/p&gt;'"
+                style="page-break-after: always;"
+            >
+            <span t-field="doc.header_page" />
         </div>
       </xpath>
 
